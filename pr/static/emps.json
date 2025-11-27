@@ -1,3 +1,10 @@
 {
-    "employees": []  
+    "employees": [
+        {
+            "csrfmiddlewaretoken": "mNlfPGRX5Co2CxS5BT2DHx5kmgR5eCnetvusUx6EE7v8BZdHA4YzgQzZx7rVdbbl",
+            "name": "vamsi567",
+            "dept": "dept567",
+            "email": "v567@gmail.com"
+        }
+    ]
 }
