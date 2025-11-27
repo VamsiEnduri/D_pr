@@ -1,0 +1,47 @@
+{
+    "employees": [
+        {
+            "name": "vamsi",
+            "dept": "training",
+            "email": "vamsi@gmail.com"
+        },
+        {
+            "name": "sathwiika",
+            "dept": "dev",
+            "email": "sathwika@gmail.com"
+        },
+        {
+            "csrfmiddlewaretoken": "lp8IrT4HmTV1W6GSdk3ifTh6VjKZUNTLs7hVwKjoVo27Vy1ucvZeOcLL6akPTmHS"
+        },
+        {
+            "csrfmiddlewaretoken": "lp8IrT4HmTV1W6GSdk3ifTh6VjKZUNTLs7hVwKjoVo27Vy1ucvZeOcLL6akPTmHS"
+        },
+        {
+            "csrfmiddlewaretoken": "lp8IrT4HmTV1W6GSdk3ifTh6VjKZUNTLs7hVwKjoVo27Vy1ucvZeOcLL6akPTmHS"
+        },
+        {
+            "csrfmiddlewaretoken": "87Yw6ZHzxoZSx5z8onw4vs5E2oh8LbO2fP7JbQWg6T6YwxUKnys04LzjdfRYKKC9",
+            "name": "sathiwka2",
+            "dept": "studder",
+            "email": "sath@gmail.com"
+        },
+        {
+            "csrfmiddlewaretoken": "87Yw6ZHzxoZSx5z8onw4vs5E2oh8LbO2fP7JbQWg6T6YwxUKnys04LzjdfRYKKC9",
+            "name": "sathiwka2",
+            "dept": "studder",
+            "email": "sath@gmail.com"
+        },
+        {
+            "csrfmiddlewaretoken": "0rhg5OnqIfdmvs7SSWB92U6JcojNoz9C79qtaFC7hKksuUsuR7x5BdAonfTDn8XJ",
+            "name": "ravi",
+            "dept": "dev",
+            "email": "ravi@gmail.com"
+        },
+        {
+            "csrfmiddlewaretoken": "hWah2e1WGrHwqT6qOeBhEahDxTB28EY0oEju75gDfWOCplr2NpxddtLiIKbS7dM7",
+            "name": "a",
+            "dept": "a",
+            "email": "a@gmail.com"
+        }
+    ]
+}
