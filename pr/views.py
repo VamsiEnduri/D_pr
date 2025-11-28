@@ -26,7 +26,7 @@ def write_data(data):
 def getAllEmps(request):
     if request.method=="GET":
         data=read_data()
-        return JsonResponse(emps_data)
+        return JsonResponse(data)
 
 
 def e(request):
