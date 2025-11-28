@@ -17,19 +17,20 @@ def write_data(data):
     with open(DATA_FILE,"w") as f:
         json.dump(data,f,indent=4)
 
-
-
+# @api_view(["GET"])
+# def getAllEmps(request):
+#     if request.method == "GET":
+#         emps_data = read_data()  # read your JSON file
+#         return JsonResponse(emps_data, safe=False)  # return JSON to fetch
 @api_view(["GET"])
 def getAllEmps(request):
-    if request.method == "GET":
-        emps_data = read_data()  # read your JSON file
-        return JsonResponse(emps_data, safe=False)  # return JSON to fetch
+    if request.method=="GET":
+        data=read_data()
+        return JsonResponse(emps_data)
 
 
 def e(request):
     return render(request,"app2/createEmp.html")
-
-
 
 @api_view(["POST"])
 def createEmp(request):

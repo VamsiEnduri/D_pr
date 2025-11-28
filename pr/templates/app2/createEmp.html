@@ -9,53 +9,47 @@
   <body>
     <h1>add employee</h1>
 
-<form method="post" action="{%url 'createEmp' %}">
-  {% csrf_token %}
-        <input type="text" name="name" placeholder="name of emp" id="name"/>
-      <input type="text" name="dept" placeholder="dept of emp" id="dept"/>
-      <input type="email"name="email" placeholder="enter emp email " id="email" />
+    <form method="post" action="{%url 'createEmp' %}">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="name of emp" id="name" />
+      <input type="text" name="dept" placeholder="dept of emp" id="dept" />
+      <input
+        type="email"
+        name="email"
+        placeholder="enter emp email "
+        id="email"
+      />
       <button id="addEmpBtn">addEmp</button>
       <!-- <input type="text" name="" id=""> -->
-</form>
+    </form>
 
-<button id="getAllEmps">getAllEmps</button>
-<div id="empList"></div>
-
-    <!-- <script src="{% static 'createEmp.js' %}"></script> -->
-     <script>
-  document.getElementById("getAllEmps").addEventListener("click", () => {
-    // Send GET request to Django view
-    fetch("{% url 'getAllEmps' %}")
-      .then(response => response.json())
-      .then(data => {
-        const empList = document.getElementById("empList");
-        empList.innerHTML = ""; // Clear previous data
-
-        if (data.employees && data.employees.length > 0) {
-          data.employees.forEach(emp => {
-            // Create a card for each employee
-            const card = document.createElement("div");
-            card.style.border = "1px solid #ccc";
-            card.style.borderRadius = "5px";
-            card.style.padding = "10px";
-            card.style.margin = "10px";
-            card.style.width = "200px";
-            card.style.display = "inline-block";
-
-            card.innerHTML = `
-              <h3>${emp.name}</h3>
-              <p><strong>Dept:</strong> ${emp.dept}</p>
-              <p><strong>Email:</strong> ${emp.email}</p>
-            `;
-            empList.appendChild(card);
+    <button id="getAllPosts">getAllPosts</button>
+    <div id="allemps"></div>
+    <script>
+      document.getElementById("getAllPosts").addEventListener("click", () => {
+        fetch("{% url 'getAllEmps'%}")
+          .then((res) => res.json())
+          .then((res) => {
+            let allemps = document.getElementById("allemps");
+           if(allemps.employees & allemps.employees.length>0){
+             allemps.employees.forEach((emp) => {
+              // console.log(emp,"emp")
+              let liTag = document.createElement("li");
+              liTag.innerHTML = `
+                <span>${emp.name}</span></br></br></br/>
+                <span>${emp.dept}</span></br></br></br/>
+                <span>${emp.email}</span></br></br></br/>
+                <button id="editBtn">edit</button>
+                <button id="deleteBtn">delete</button>
+                `;
+              allemps.appendChild(liTag);
+            });
+           }
+          })
+          .cath((err) => {
+            console.log(err);
           });
-        } else {
-          empList.innerHTML = "<p>No employees found</p>";
-        }
-      })
-      .catch(err => console.error("Error fetching employees:", err));
-  });
-</script>
-
+      });
+    </script>
   </body>
 </html>
