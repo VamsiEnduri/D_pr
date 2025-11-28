@@ -32,7 +32,8 @@
           .then((res) => {
             let allemps = document.getElementById("allemps");
             console.log(allemps,"allemps")
-           if(res.employees & res.employees.length>0){
+            console.log(res.employees.length,"res")
+           if(res.employees && res.employees.length>0){
              res.employees.forEach((emp) => {
               console.log(emp,"emp")
               let liTag = document.createElement("li");
