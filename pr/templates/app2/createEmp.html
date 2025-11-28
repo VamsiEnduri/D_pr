@@ -31,9 +31,10 @@
           .then((res) => res.json())
           .then((res) => {
             let allemps = document.getElementById("allemps");
+            console.log(allemps,"allemps")
            if(allemps.employees & allemps.employees.length>0){
              allemps.employees.forEach((emp) => {
-              // console.log(emp,"emp")
+              console.log(emp,"emp")
               let liTag = document.createElement("li");
               liTag.innerHTML = `
                 <span>${emp.name}</span></br></br></br/>
